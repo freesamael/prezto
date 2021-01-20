@@ -5,9 +5,18 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# Add user-specific zfunctions
+fpath+=~/.zfunc
+
+POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_CONTEXT_TEMPLATE='%n'
+DEFAULT_USER='freesamael'
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
 # Customize to your needs...
+autoload -U bashcompinit && bashcompinit
+
